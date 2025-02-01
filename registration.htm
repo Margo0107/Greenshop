@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="form_conteiner">
+      <button class="login">login</button>
+      <div class="btn"></div>
+      <button class="button_register">register</button>
+    </div>
+    <p class="text_email">Enter your email and password to register</p>
+    <form action="/cobmit" method="get">
+      <div class="form-register">
+        <input class="input" type="text" name="name" placeholder="Username" />
+      </div>
+      <div class="form-register">
+        <input
+          class="input"
+          type="email"
+          name="email"
+          placeholder="Enter your email address"
+        />
+      </div>
+      <div class="form-register">
+        <input
+          class="input"
+          type="text"
+          name="password"
+          placeholder="password"
+        />
+      </div>
+      <div class="form-register">
+        <input
+          class="input"
+          type="text"
+          name="password"
+          placeholder="Confirm password"
+        />
+      </div>
+      <button type="submit" class="button_text">register</button>
+    </form>
+    <p class="text_register"><span class="line">Or register with</span></p>
+    <button type="button" class="social_login">
+      <img class="icon_google" src="/images/icon-google.png" alt="google_icon" />
+      <span>Continue with Google</span>
+    </button>
+    <button type="button" class="social_login">
+      <img class="icon_facebook" src="/images/facebook_images.png" alt="facebook_icon" />
+      <span>Continue with Facebook</span>
+    </button>
+  </body>
+</html>
