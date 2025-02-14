@@ -58,6 +58,7 @@ body {
 }
 .clearfix {
   display: flex;
+  justify-content: space-between;
 }
 .clearfix::after {
   content: "";
@@ -83,6 +84,7 @@ body {
 .header_list {
   display: flex;
   justify-content: center;
+  gap: 45px;
 }
 .header_list li {
   margin: 0 15px;
@@ -278,6 +280,15 @@ h1 {
   max-width: 310px;
   margin: 0 auto;
 }
+.pages_right {
+  margin: 3px 0 0 3px;
+}
+.pages{
+  font-weight: 300;
+}
+.pages li:hover{
+font-weight: 700;
+}
 .sidebar_cat {
   list-style-type: none;
   padding: 0 0 0 12px;
@@ -309,12 +320,13 @@ h1 {
 .product_sort_filter {
   text-transform: capitalize;
   list-style-type: none;
-  padding: 0;
+  padding: 0 0 0 24px;
   margin: 0;
   float: left;
+  flex-grow: 1;
 }
 .product_sort_sorting {
-  float: right;
+  padding: 0 20px 0 0;
 }
 .product_sort_sorting_title,
 .product_sort_select {
@@ -323,6 +335,7 @@ h1 {
 }
 .product_sort_sorting_title {
   margin-right: 10px;
+  padding-bottom: 5px;
 }
 .product_sort_option::after {
   content: "";
@@ -356,7 +369,11 @@ h1 {
   margin: 0 0 50px;
   padding: 0;
 }
+.product_img:hover {
+  border-top: 1px solid #46a358;
+}
 .produck_item {
+  position: relative;
   width: 250px;
   text-align: center;
 }
@@ -368,6 +385,7 @@ h1 {
 .prace {
   font-size: 18px;
   font-weight: 700;
+  margin: 0 16px 0 0;
   color: #46a358;
 }
 .product_img {
@@ -377,7 +395,6 @@ h1 {
 .pages {
   list-style-type: none;
   margin: 0;
-  margin-bottom: 80px;
   padding: 0;
   text-align: right;
 }
@@ -404,6 +421,9 @@ h1 {
 .product_sort {
   margin-bottom: 31px;
 }
+.promo_section {
+  padding-top: 94px;
+}
 .promo_container {
   display: flex;
   gap: 28px;
@@ -423,7 +443,7 @@ h1 {
 .promo_text {
   text-align: right;
   padding: 30px 30px 20px 20px;
-  color: #3d3d3d;
+  color: inherit;
   flex-shrink: 0;
   flex: 1;
 }
@@ -433,7 +453,6 @@ h1 {
   font-size: 18px;
   line-height: 24px;
   margin: 0 0 9px 0;
-  padding: 0 0 0 110px;
 }
 .promo_text p {
   color: #727272;
@@ -441,9 +460,20 @@ h1 {
   line-height: 24px;
   margin: 0 0 25px 0;
 }
+.icon_btn {
+  width: 18px;
+  height: 18px;
+}
+.button span {
+  display: flex;
+  line-height: 20px;
+  font-weight: 500;
+}
 .button {
-  display: inline-block;
-  padding: 11px 47px 9px 28px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 11px 28px;
   border: 1px solid #46a358;
   background: #46a358;
   color: #fff;
@@ -463,10 +493,9 @@ h1 {
 }
 .blog_Posts h4 {
   font-weight: 700;
-  font-size: 30px;
-  line-height: 16px;
+  font-size: 20px;
+  line-height: 26px;
   margin: 0 0 15px 0;
-  color: #3d3d3d;
 }
 .blog_Posts p {
   font-size: 14px;
@@ -528,3 +557,103 @@ h1 {
   width: 16px;
   height: 16px;
 }
+.info-sale {
+  position: absolute;
+  font-weight: 500;
+  line-height: 16px;
+  top: 14px;
+  left: 0;
+  padding: 6px 9px;
+  color: #fff;
+  background: #46a358;
+}
+.discount-info {
+  color: #a5a5a5;
+  font-size: 18px;
+  line-height: 16px;
+}
+.discount-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.product_img {
+  position: relative;
+}
+.produck_icon {
+  list-style-type: none;
+  display: flex;
+  position: absolute;
+  bottom: 7px;
+  padding: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  gap: 10px;
+}
+.produck_icon_link {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  display: none;
+}
+.produck_item:hover .produck_icon_link {
+  display: flex;
+  color: #3d3d3d;
+}
+.produck_icon_link:hover svg {
+  fill: #46a358;
+}
+.header_nav li {
+  position: relative;
+}
+.header_list:hover .header_nav_submenu {
+  display: block;
+
+}
+.header_nav_submenu {
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+  width: 188px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  padding-top: 47px;
+}
+.header_nav_submenu a{
+background: #edf6ee;
+}
+
+.header_nav_submenu a {
+  display: block;
+  padding: 8px 14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header_nav_submenu a:hover {
+  background: #1a712a;
+  color: #fff;
+  font-weight: 700;
+}
+.header_list {
+  position: relative;
+}
+.header_nav_secondmenu {
+  text-align: left;
+  list-style-type: none;
+  background: #edf6ee;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 176px;
+}
+
