@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burger menu</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="spinner-box">
+      <div class="leo-border-1">
+        <div class="leo-core-1"></div>
+      </div>
+      <div class="leo-border-2">
+        <div class="leo-core-2"></div>
+      </div>
+    </div>
+    </div>
+    <!-- content+main-menu -->
+    <div id="content" class="hidden">
+      <div class="header">
+        <label class="label-input">
+          <input class="check" type="checkbox" />
+          <div class="burger">
+            <span></span>
+          </div>
+        </label>
+        <nav class="main-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li><a href="#">help</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <script>
+      window.onload = function () {
+        setTimeout(function () {
+          document.getElementById("preloader").style.display = "none";
+          document.getElementById("content").style.display = "block";
+        }, 6000);
+      };
+    </script>
+  </body>
+</html>
